@@ -1,7 +1,6 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  height: 1000px;
   background-color: lightblue;
   overflow-x: hidden;
 }
@@ -10,6 +9,7 @@ a {
 }
 header {
   background-image: url(./Images/aurora-borealis-2464940_1920.jpg);
+  background-attachment: local;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -55,11 +55,173 @@ nav {
   display: none;
 }
 .about_wrapper {
-  display: flex;
   width: 100%;
   background-color: lightgray;
   padding: 50px 0 50px 0;
   height: auto;
+}
+.about_content {
+  display: flex;
+  width: 40%;
+  margin: auto;
+}
+.img_wrapper {
+  margin-right: 30px;
+}
+.img_wrapper img {
+  border-radius: 50%;
+}
+.about_me,
+.about_contact {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.about_me_content {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.hobby_content_wrapper {
+  display: flex;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  left: 0;
+}
+.hobby_content1 {
+  background-color: lightgreen;
+  width: 25%;
+  height: 500px;
+  position: absolute;
+  background-image: url("./Images/simon-migaj-Yui5vfKHuzs-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hobby_content2 {
+  background-color: bisque;
+  width: 25%;
+  height: 500px;
+  position: absolute;
+  left: 25%;
+  background-image: url("./Images/julian-hochgesang--Wd8gStxy3s-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hobby_content3 {
+  background-color: coral;
+  width: 25%;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  background-image: url("./Images/denise-jans-Lq6rcifGjOU-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hobby_content4 {
+  background-color: teal;
+  width: 25%;
+  height: 500px;
+  position: absolute;
+  left: 75%;
+  background-image: url("./Images/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.notionAndGit {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+  background: white;
+}
+.notionAndGit div {
+  width: 50%;
+  font-size: 50px;
+}
+.notionAndGit div a {
+  padding: 10px;
+}
+
+@keyframes hobby_one {
+  0% {
+    width: 25%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hobby_two {
+  0% {
+    width: 25%;
+    left: 25%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes hobby_three {
+  0% {
+    width: 25%;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes hobby_four {
+  0% {
+    width: 25%;
+    left: 75%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.hobby_content1:hover {
+  width: 100%;
+  z-index: 9999;
+  animation: hobby_one 0.5s ease-in;
+}
+.hobby_content2:hover {
+  width: 100%;
+  z-index: 9999;
+  left: 0;
+  animation: hobby_two 0.5s ease-in;
+}
+.hobby_content3:hover {
+  width: 100%;
+  z-index: 9999;
+  left: 0;
+  animation: hobby_three 0.5s ease-in;
+}
+.hobby_content4:hover {
+  width: 100%;
+  z-index: 9999;
+  left: 0;
+  animation: hobby_four 0.5s ease-in;
+}
+.bestDeveloper {
+  height: 250px;
+  background-color: black;
+  line-height: 250px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
 }
 
 @media (max-width: 480px) {
@@ -124,5 +286,16 @@ nav {
     padding: 10px;
     width: 100%;
     border-bottom: 1px solid black;
+  }
+  .about_content {
+    flex-direction: column;
+  }
+  .img_wrapper {
+    text-align: center;
+  }
+  .img_wrapper img {
+    width: 100px;
+    height: 100px;
+    margin: 0;
   }
 }
